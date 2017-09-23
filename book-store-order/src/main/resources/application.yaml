@@ -1,0 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+spring:
+   application:
+      name: book-store-order
+
+server:
+      port: 9003
+
+ribbon:
+      eureka:
+         enable: true
